@@ -1,0 +1,26 @@
+{
+    "name": "vincent/webapp",
+    "description": "MVC project",
+    "type": "project",
+    "license": "1.0",
+    "authors": [
+        {
+            "name": "John Doe",
+            "email": "johndoe@example.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "ext-json": "*",
+      "ext-fileinfo": "*",
+      "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "mvc_eins\\": [
+                "./templates",
+                "./src"
+            ]
+        }
+    }
+}

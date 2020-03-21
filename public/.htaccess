@@ -1,0 +1,55 @@
+#php_value output_buffering On
+#php_value output_handler mb_output_handler
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-l
+
+
+
+
+##index/action/param1/param2/param3
+RewriteRule ^([^\/]+)(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?.*$ index.php?action=$2&wert1=$3&wert2=$4&wert3=$5
+#RewriteRule ^.*$ index.php?action=$2&wert1=$3&wert2=$4&wert3=$5
+#Array
+#(
+#    [action] =>
+#    [wert1] =>
+#    [wert2] =>
+#    [wert3] =>
+#)
+#echo $_GET['action'];
+#echo $_GET['wert1'];
+#echo $_GET['wert2'];
+#echo $_GET['wert3'];
+#RewriteRule ^([^\/]+)(?:\/)?([^\/]+)?.*$ index.php?action=$2&wert1=$3&wert2=$4&wert3=$5
+#^([^\/]+).*$ gibt alles .*$ aus
+#0=>index/action/param1/param2/param3/dddd/hhh
+#1=>index
+
+#^([^\/]+)  ^- vom Anfang an ([^\/]+)   alle Zeichen, außer "/"
+#? kann hinzukommen, oder nicht
+#?: Ausblenden "/" (?:\/)
+</IfModule>
+
+
+
+#^([^\/]+)(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?(?:\/)?.*$
+################0=>index/action/param1/param2/param3/dddd/hhh
+################1=>index
+################2=>action
+################3=>param1
+################4=>param2
+################5=>param3
+###echo $_GET['wert3'];
+
+#^([^\/]+)(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?(?:\/)?([^\/]+)?(?:\/)?
+################0=>index/action/param1/param2/param3
+################1=>index
+################2=>action
+################3=>param1
+################4=>param2
+################5=>param3

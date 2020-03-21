@@ -1,0 +1,169 @@
+@charset "utf-8";
+* {
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+
+}
+
+$h1_color: #B51240;
+$h2_color: #0F6118;
+$h3_color: #0F6118;
+$h4_color: #0F6118;
+$h5_color: #B51240;
+$h6_color: #0F6118;
+$b_color: #007598;
+
+body {
+  background-color: #f6f6f6 !important;
+
+}
+
+img.body {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+ul, ol {
+  list-style: none;
+}
+
+b, strong {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+img, a img {
+  border: none;
+}
+
+/*------------------SCHRIFT / GRĂ–SSE ----------*/
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600 !important;
+  margin-top: 5px !important;
+  font-family: Georgia, Arial, "Times New Roman" !important;
+}
+
+h1.center, h2.center, h3.center, h4.center, h5.center h6.center {
+  text-align: center !important;
+}
+
+b {
+  color: $b_color !important;
+}
+ul.res {
+  display: table;
+  list-style-type: none;
+}
+ul.res li {
+  display: table-row;
+
+}
+ul.res li * {
+  display: table-cell;
+  width: 200px;
+}
+h1 {
+  color: $h1_color !important;
+  font-size: 1.8em !important;
+}
+
+h2 {
+  color: $h2_color !important;
+  font-size: 1.3em !important;
+}
+
+h3 {
+  color: $h3_color !important;
+  font-size: 1.2em !important;
+}
+
+h4 {
+  color: $h4_color !important;
+  font-size: 1.4em !important;
+}
+
+h5 {
+  color: $h5_color !important;
+  font-size: 1.3em !important;
+}
+
+h6 {
+  color: $h6_color !important;
+  font-size: 1.2em !important;
+}
+
+p.block {
+  text-align: justify;
+}
+
+
+.row {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  margin-bottom: 0px !important;
+  padding-bottom: 15px !important;
+}
+
+.row.skizze {
+  padding-bottom: 0 !important;
+}
+
+.color {
+  background-color: #fff !important;
+}
+
+
+.reset {
+  padding: 0 !important;
+  margin-right: 0 !important;
+}
+
+
+p {
+  word-wrap: break-word;
+  padding: 0 0 0 0 !important;
+  margin: 0 0 1em 0 !important;
+  font-family: Georgia, Arial, "Times New Roman" !important;
+  font-size: 1.2em !important;
+  color: #007598;
+}
+
+a, p {
+  word-wrap: break-word;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+
+a.underline {
+  text-decoration: underline;
+  background-color: $h2_color;
+}
+
+a:link,
+a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+a:link.reservierung,
+a:visited.reservierung {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover.reservierung,
+a:focus.reservierung,
+a:active.reservierung {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
