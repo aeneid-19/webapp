@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace mvc_eins\Template\Head;
+namespace mvc_eins\Head;
 
 /**
  * Class HeadIndex
