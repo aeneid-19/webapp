@@ -1,0 +1,11 @@
+package-lock.json
+vagrantfile
+vagrantfile.sh
+.htaccess
+
+/.vagrant
+/.idea
+/node_modules
+/resources/bootstrap
+/resources/jquery
+/vendor

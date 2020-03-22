@@ -19,32 +19,32 @@ declare(strict_types=1);
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'DB') {
 						echo ' active';
-					} ?>" href="/DB/index">DB</a>
+					} ?>" href="/DB">DB</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Portfolio') {
 						echo ' active';
-					} ?>" href="/Portfolio/index">Portfolio</a>
+					} ?>" href="/Portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Contact') {
 						echo ' active';
-					} ?>" href="/Contact/index">Contact</a>
+					} ?>" href="/Contact">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Impressum') {
 						echo ' active';
-					} ?>" href="/Impressum/index">Impressum</a>
+					} ?>" href="/Impressum">Impressum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Guestbook') {
 						echo ' active';
-					} ?>" href="/Guestbook/index">Guestbook</a>
+					} ?>" href="/Guestbook">Guestbook</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Speichern') {
 						echo ' active';
-					} ?>" href="/Speichern/index">Speichern</a>
+					} ?>" href="/Speichern">Speichern</a>
                 </li>
 				<?php if (isset($_SESSION['login'])) { ?>
                     <li class="nav-item">
@@ -54,7 +54,7 @@ declare(strict_types=1);
                     <li class="nav-item">
                         <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Login') {
 							echo ' active';
-						} ?>" href="/Access/index">Login</a>
+						} ?>" href="/Access">Login</a>
                     </li>
 				<?php } ?>
             </ul>
