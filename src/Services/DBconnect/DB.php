@@ -2,9 +2,9 @@
 declare(strict_types=1);
 
 namespace mvc_eins\Services\DBconnect;
-
 use PDO;
 use PDOException;
+use function count;
 
 /**
  * Class DB
@@ -13,7 +13,9 @@ use PDOException;
 class DB
 {
 	private static DB $_instance;
-	private $_query, $_result, $_lastInsertID;
+	private bool $_query;
+	private array $_result;
+	private string $_lastInsertID;
 	private bool $_error = false;
 	private int $_count = 0;
 	private PDO $_pdo;
@@ -33,10 +35,7 @@ class DB
 	 */
 	public static function getInstance() : DB
 	{
-		// ‌PHP Fatal error: Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
-		// TODO: fix
-		if (!isset(self::$_instance)) {
-			//if (null === self::$_instance) {
+		if (!self::$_instance) {
 			self::$_instance = new DB();
 		}
 		return self::$_instance;
@@ -52,7 +51,7 @@ class DB
 		$this->_error = false;
 		if ($this->_query = $this->_pdo->prepare($sql)) {
 			$x = 1;
-			if (\count($params)) {
+			if (count($params)) {
 				foreach ($params as $param) {
 					$this->_query->bindValue($x, $param);
 					$x++;
@@ -115,10 +114,7 @@ class DB
 		$sql = "SELECT * FROM {$table}{$conditionString}{$order}{$limit}";
 		if ($this->query($sql, $bind)) {
 			//dnd($sql);
-			if ($this->_result && !\count($this->_result)) {
-				return false;
-			}
-			return true;
+			return !($this->_result && !count($this->_result));
 		}
 		return false;
 	}
@@ -139,9 +135,9 @@ class DB
 		return false;
 	}
 
-	/* This DB Wrapper method prevents SQL injection by converting all of the values */
-	/* of the INSERT statement to strings */
 	/**
+	 * This DB Wrapper method prevents SQL injection by converting
+	 * all of the values of the INSERT statement to strings.
 	 * @param string     $table
 	 * @param array|null $fields
 	 * @return bool
@@ -185,7 +181,7 @@ class DB
 		$fieldString = trim($fieldString);
 		$fieldString = rtrim($fieldString, ',');
 		$sql = "UPDATE {$table} SET {$fieldString} WHERE id = {$id}";
-		if (!$this->query($sql, $values)->error()) { // duplicate code! try to make a method for it.
+		if (!$this->query($sql, $values)->error()) {
 			return true;
 		}
 		return false;
