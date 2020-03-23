@@ -5,7 +5,7 @@ use Exception;
 use mvc_eins\{Foot\FootIndex, Head\HeadIndex, Navi\NaviIndex};
 
 require __DIR__ . '/config/config.php';
-
+$_SESSION['loggedin'] = false;
 //dnd($_POST);
 try {
 	$init = new Init();
