@@ -13,8 +13,6 @@ class NaviIndex
 	 */
 	public static function getNavi(string $activeItem = null) : void
     {
-        require_once __DIR__ . '/navi.tpl.php';
+    	require_once __DIR__ . '/navi.tpl.php';
     }
 }
-
-

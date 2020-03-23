@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace mvc_eins\Services\DBconnect;
 use PDO;
 use PDOException;
-use function count;
 
 /**
  * Class DB
@@ -24,7 +23,8 @@ class DB
 	{
 		$configINI = parse_ini_file(__DIR__ . '/../DBconfig/db_config.ini');
 		try {
-			$this->_pdo = new PDO('mysql:host=' . $configINI['host'] . ';dbname=' . $configINI['dbname'], '' . $configINI['username'] . '', '' . $configINI['passwd'] . '');
+			$this->_pdo = new PDO('mysql:host=' . $configINI['host'] . ';dbname=' . $configINI['dbname'],
+				'' . $configINI['username'] . '', '' . $configINI['passwd'] . '');
 		} catch (PDOException $e) {
 			die($e->getMessage());
 		}
@@ -51,7 +51,7 @@ class DB
 		$this->_error = false;
 		if ($this->_query = $this->_pdo->prepare($sql)) {
 			$x = 1;
-			if (count($params)) {
+			if (\count($params)) {
 				foreach ($params as $param) {
 					$this->_query->bindValue($x, $param);
 					$x++;
