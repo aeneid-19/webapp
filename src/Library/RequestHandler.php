@@ -8,7 +8,7 @@ namespace mvc_eins\Library;
  */
 class RequestHandler
 {
-	private string $defaultAction = '/index';
+	private string $defaultAction = 'index';
 	private string $defaultController = 'home';
 	private string $requestUri;
 	private string $controllerName;

@@ -20,9 +20,9 @@ class Controller extends AbstractController
 	{
 		// TODO: Implement indexAction() method.
 		if ($db = DB::getInstance()){
-			echo 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+			echo 'DB connection established.';
 		} else {
-			echo 'sgoiwnrgpijnwspkgnsdpkgngpkn';
+			echo 'Error: Connection to DB couldn\'t be established!';
 		}
 	}
 }
