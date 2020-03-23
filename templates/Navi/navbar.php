@@ -1,4 +1,5 @@
 <?php
+$demos = ['Portfolio', 'Impressum', 'DB', 'Speichern', 'Wertschoepfung', 'Darlehensberechnung'];
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -9,26 +10,46 @@
     </button>
     <div class="collapse navbar-collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarNavDropdown">
         <ul class="navbar-nav">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+                <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Home') {
+	                echo ' active';
+                } ?>" href="/">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Services/index">Services</a>
+                <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Services') {
+	                echo ' active';
+                } ?>" href="/Services/index">Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Pricing/index">Pricing</a>
+                <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Pricing') {
+	                echo ' active';
+                } ?>" href="/Pricing/index">Pricing</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Store/index">Store</a>
+                <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Store') {
+	                echo ' active';
+                } ?>" href="/Store/index">Store</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/Support/index">Support</a>
+                <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Support') {
+	                echo ' active';
+                } ?>" href="/Support/index">Support</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/Access/index">Login</a>
-            </li>
+	        <?php if (isset($_SESSION['login'])) { ?>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Access/logout">Logout</a>
+                </li>
+	        <?php } else { ?>
+                <li class="nav-item">
+                    <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Access') {
+				        echo ' active';
+			        } ?>" href="/Access/index">Login</a>
+                </li>
+	        <?php } ?>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                <a class="nav-link dropdown-toggle <?php if (in_array($_SESSION['activeItem'], $demos, true)) {
+	                echo ' active';
+                } ?>" href="#" id="navbarDropdownMenuLink" role="button"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Demos
                 </a>
