@@ -19,32 +19,32 @@ declare(strict_types=1);
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'DB') {
 						echo ' active';
-					} ?>" href="/DB/">DB</a>
+					} ?>" href="/DB/index">DB</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Portfolio') {
 						echo ' active';
-					} ?>" href="/Portfolio/">Portfolio</a>
+					} ?>" href="/Portfolio/index">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Contact') {
 						echo ' active';
-					} ?>" href="/Contact/">Contact</a>
+					} ?>" href="/Contact/index">Contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Impressum') {
 						echo ' active';
-					} ?>" href="/Impressum/">Impressum</a>
+					} ?>" href="/Impressum/index">Impressum</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Guestbook') {
 						echo ' active';
-					} ?>" href="/Guestbook/">Guestbook</a>
+					} ?>" href="/Guestbook/index">Guestbook</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Speichern') {
 						echo ' active';
-					} ?>" href="/Speichern/">Speichern</a>
+					} ?>" href="/Speichern/index">Speichern</a>
                 </li>
 				<?php if (isset($_SESSION['login'])) { ?>
                     <li class="nav-item">
@@ -54,7 +54,7 @@ declare(strict_types=1);
                     <li class="nav-item">
                         <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Login') {
 							echo ' active';
-						} ?>" href="/Access/">Login</a>
+						} ?>" href="/Access/index">Login</a>
                     </li>
 				<?php } ?>
             </ul>

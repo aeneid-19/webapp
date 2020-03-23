@@ -13,7 +13,7 @@ try {
 	$_SESSION['title'] = $_SESSION['activeItem'];
 	HeadIndex::getHead();
 	NaviIndex::getNavi($_SESSION['activeItem']);
-	//dnd($_SERVER);
+	//dnd($_SESSION);
 	$init->setDisplay();
 } catch (Exception $e) {
 	echo $e->getMessage();
