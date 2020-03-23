@@ -5,7 +5,6 @@ use mvc_eins\AbstractClasses\AbstractController;
 use mvc_eins\Models\Handlers\UserAccessHandler;
 use mvc_eins\Views\Home\ViewHome;
 use mvc_eins\Views\Login\ViewLogin;
-use function strlen;
 
 /**
  * Class Controller
@@ -34,7 +33,7 @@ class Controller extends AbstractController
 		// TODO: Force input in both fields through HTML/CSS.
 		if (empty($_POST['username']) || empty($_POST['password'])) {
 			$this->getView('Incomplete input! Fill out both fields.');
-		} elseif (strlen($_POST['password']) < 6) {
+		} elseif (\strlen($_POST['password']) < 6) {
 			$this->getView('Your password must have at least 6 characters!');
 		} elseif (preg_match('/[\W]+/', $_POST['username'])) {
 			if (UserAccessHandler::checkLogin(htmlspecialchars(stripslashes(trim($_POST['username']))), htmlspecialchars(trim($_POST['password'])))) {
