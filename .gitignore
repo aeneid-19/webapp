@@ -1,9 +1,5 @@
 package-lock.json
-vagrantfile
-vagrantfile.sh
-.gitignore
 
-/.vagrant
 /.idea
 /node_modules
 /resources/bootstrap
