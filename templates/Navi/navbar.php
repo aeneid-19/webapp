@@ -13,7 +13,7 @@ $demos = ['Portfolio', 'Impressum', 'DB', 'Speichern', 'Wertschoepfung', 'Darleh
             <li class="nav-item">
                 <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Home') {
 	                echo ' active';
-                } ?>" href="/">Home <span class="sr-only">(current)</span></a>
+                } ?>" href="/">Home</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link <?php if ($_SESSION['activeItem'] === 'Services') {
