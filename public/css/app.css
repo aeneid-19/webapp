@@ -157,7 +157,7 @@ a:active.reservierung {
   border-radius: 0.25rem !important; }
 
 .active {
-  background-color: #353a3f !important;
+  background-color: #B3A609 !important;
   color: #ffffff !important; }
 
 .navbar {
@@ -165,14 +165,14 @@ a:active.reservierung {
 
 .nav-item:hover .nav-link {
   color: #ffffff !important;
-  background-color: #353a3f !important; }
+  background-color: #B3A609 !important; }
 
 .nav-item-foot a {
   color: #fff; }
 
 .nav-item-foot:hover .nav-link {
   color: #ffffff !important;
-  background-color: #353a3f !important; }
+  background-color: #B3A609 !important; }
 
 .nav-pills .nav-link {
   border-radius: 0; }
@@ -196,14 +196,14 @@ a:active.reservierung {
 .dropdown-item:hover, .dropdown-item:focus {
   text-decoration: none;
   color: #ffffff !important;
-  background-color: #353a3f !important; }
+  background-color: #B3A609 !important; }
 
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  background-color: #353a3f !important;
+  background-color: #B3A609 !important;
   color: #ffffff !important; }
 
 .navbar-toggler:hover .navbar-toggler-icon {
-  background-color: #353a3f !important;
+  background-color: #B3A609 !important;
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important; }
 
 .navbar-toggler {
@@ -223,7 +223,7 @@ a:active.reservierung {
 
 .navbar-brand:hover {
   color: #ffffff !important;
-  background-color: #353a3f !important; }
+  background-color: #B3A609 !important; }
 
 .dropdown-divider {
   margin: 0.1rem 0 !important;
@@ -252,7 +252,7 @@ a:active.reservierung {
     margin: 0 1px 0 1px; } }
 
 .nav-link {
-  background: #353a3f; }
+  background: #007598; }
 
 div.trans {
   height: 60px; }
