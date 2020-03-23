@@ -1,13 +1,13 @@
 <?php
 declare(strict_types=1);
 
-namespace mvc_eins\Controllers\DB;
+namespace mvc_eins\Controllers\Wertschoepfung;
 use mvc_eins\AbstractClasses\AbstractController;
-use mvc_eins\Services\DBoperations\DB;
+use mvc_eins\Views\Wertschoepfung\ViewWertschoepfung;
 
 /**
  * Class Controller
- * @package mvc_eins\Controllers\DB
+ * @package mvc_eins\Controllers\Wertschoepfung
  */
 class Controller extends AbstractController
 {
@@ -18,10 +18,10 @@ class Controller extends AbstractController
 	public function indexAction()
 	{
 		// TODO: Implement indexAction() method.
-		if ($db = DB::getInstance()){
-			echo 'DB connection established.';
-		} else {
-			echo 'Error: Connection to DB couldn\'t be established!';
-		}
+	}
+
+	private function getView() : void
+	{
+		ViewWertschoepfung::getContent();
 	}
 }

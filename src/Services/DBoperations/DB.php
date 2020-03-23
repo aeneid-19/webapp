@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace mvc_eins\Services\DBconnect;
+namespace mvc_eins\Services\DBoperations;
 use PDO;
 use PDOException;
 
