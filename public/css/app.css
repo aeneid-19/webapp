@@ -4,13 +4,9 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-* {
-  font-family: sans-serif;
-  /* Change your font family */ }
-
 .content-table {
   border-collapse: collapse;
-  margin: 25px 0;
+  margin: 25px auto;
   font-size: 0.9em;
   min-width: 400px;
   border-radius: 5px 5px 0 0;
@@ -25,7 +21,7 @@
 
 .content-table th,
 .content-table td {
-  padding: 12px 15px; }
+  padding: 5px 3px; }
 
 .content-table tbody tr {
   border-bottom: 1px solid #dddddd; }
@@ -38,7 +34,7 @@
 
 .content-table tbody tr.active-row {
   font-weight: bold;
-  color: #009879; }
+  color: #ffc107; }
 
 :root {
   --blue: #007bff;

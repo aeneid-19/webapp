@@ -11,7 +11,7 @@ use PDOException;
  */
 class DB
 {
-	private static DB $_instance;
+	private static ?DB $_instance = null;
 	private bool $_query;
 	private array $_result;
 	private string $_lastInsertID;
@@ -35,7 +35,7 @@ class DB
 	 */
 	public static function getInstance() : DB
 	{
-		if (!self::$_instance) {
+		if (self::$_instance === null) {
 			self::$_instance = new DB();
 		}
 		return self::$_instance;

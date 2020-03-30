@@ -10,7 +10,11 @@ use mvc_eins\Interfaces\IView;
  */
 class ViewWertschoepfung implements IView
 {
-	public static function getContent() : void
+	/**
+	 * @param array $jahre
+	 * @param array $datensatz
+	 */
+	public static function getContent(array $jahre = [], array $datensatz = []) : void
 	{
 		require_once __DIR__ . '/wertschoepfung.php';
 	}

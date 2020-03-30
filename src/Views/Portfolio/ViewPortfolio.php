@@ -45,6 +45,10 @@ class ViewPortfolio implements IView
 		require_once __DIR__ . '/meldung.php';
 	}
 
+	/**
+	 * @param array $datensatz
+	 * @param array $indexNameArray
+	 */
 	public static function getAuslesen(array $datensatz = [], array $indexNameArray = []) : void
 	{
 		require_once __DIR__ . '/portfolio.php';

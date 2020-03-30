@@ -1,0 +1,50 @@
+{
+  "1970": {
+    "Land-, Forstwirtschaft, Fischerei": 10.7,
+    "warenproduzierendes Gewerbe": 131.3,
+    "Baugewerbe": 26.2,
+    "Handel, Verkehr, Gastgewerbe": 62.4,
+    "Finanzierung, Vermietung, Unternehmensdienstleister": 45.2,
+    "\u00f6ffentliche + private Dienstleister": 49.6
+  },
+  "1980": {
+    "Land-, Forstwirtschaft, Fischerei": 14.6,
+    "warenproduzierendes Gewerbe": 247.3,
+    "Baugewerbe": 50.2,
+    "Handel, Verkehr, Gastgewerbe": 130.6,
+    "Finanzierung, Vermietung, Unternehmensdienstleister": 132.7,
+    "\u00f6ffentliche + private Dienstleister": 141.7
+  },
+  "1990": {
+    "Land-, Forstwirtschaft, Fischerei": 18.1,
+    "warenproduzierendes Gewerbe": 385,
+    "Baugewerbe": 66.7,
+    "Handel, Verkehr, Gastgewerbe": 207,
+    "Finanzierung, Vermietung, Unternehmensdienstleister": 289.1,
+    "\u00f6ffentliche + private Dienstleister": 232.3
+  },
+  "2000": {
+    "Land-, Forstwirtschaft, Fischerei": 23.4,
+    "warenproduzierendes Gewerbe": 465.3,
+    "Baugewerbe": 96.2,
+    "Handel, Verkehr, Gastgewerbe": 337.3,
+    "Finanzierung, Vermietung, Unternehmensdienstleister": 510.9,
+    "\u00f6ffentliche + private Dienstleister": 423
+  },
+  "2005": {
+    "Land-, Forstwirtschaft, Fischerei": 17.8,
+    "warenproduzierendes Gewerbe": 523.6,
+    "Baugewerbe": 78.1,
+    "Handel, Verkehr, Gastgewerbe": 365.4,
+    "Finanzierung, Vermietung, Unternehmensdienstleister": 590.2,
+    "\u00f6ffentliche + private Dienstleister": 452.4
+  },
+  "2010": {
+    "Land-, Forstwirtschaft, Fischerei": 19.5,
+    "warenproduzierendes Gewerbe": 532.2,
+    "Baugewerbe": 92.6,
+    "Handel, Verkehr, Gastgewerbe": 385.3,
+    "Finanzierung, Vermietung, Unternehmensdienstleister": 681.8,
+    "\u00f6ffentliche + private Dienstleister": 528.8
+  }
+}
