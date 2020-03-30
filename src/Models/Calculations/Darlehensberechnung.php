@@ -90,9 +90,7 @@ class Darlehensberechnung
 		$this->_ergebnis[$this->_zaehler]['Tilgung'] = number_format($this->_jahrestilgung, 2, ',', '.') . ' €';
 		$this->_ergebnis[$this->_zaehler]['Annuität'] = number_format($this->_annuitaet, 2, ',', '.') . ' €';
 		$this->_ergebnis[$this->_zaehler]['Monatsrate'] = number_format($this->_monatsrate, 2, ',', '.') . ' €';
-		$this->_kreditsumme -= $this->_jahrestilgung;
-		$this->_gesamtzinsen += $this->_jahreszinsen;
-		$this->_gesamttilgung += $this->_jahrestilgung;
+		$this->aktualisiereSummen();
 		if (++$this->_zaehler === $this->_laufzeit) {
 			$gesamtvolumen = $this->_gesamtzinsen + $this->_gesamttilgung + $this->_kreditsumme;
 			$this->_monatsrate += $gesamtvolumen - $this->_rueckzahlung;
@@ -103,6 +101,13 @@ class Darlehensberechnung
 			$this->_ergebnis[$this->_zaehler]['Annuität'] = number_format($gesamtvolumen, 2, ',', '.') . ' €';
 			$this->_ergebnis[$this->_zaehler]['Monatsrate'] = '';
 		}
+	}
+
+	private function aktualisiereSummen() : void
+	{
+		$this->_kreditsumme -= $this->_jahrestilgung;
+		$this->_gesamtzinsen += $this->_jahreszinsen;
+		$this->_gesamttilgung += $this->_jahrestilgung;
 	}
 
 	private function erstelleErgebnisVorlage() : void
